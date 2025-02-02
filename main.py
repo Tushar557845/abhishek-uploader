@@ -34,7 +34,7 @@ bot = Client(
 
 @bot.on_message(filters.command(["start2"]))
 async def start(bot: Client, m: Message):
-    await m.reply_text(f"<b>Hello {m.from_user.mention} 👋\n\n➨ ɪ ᴀᴍ ᴛxᴛ ᴛᴏ ᴠɪᴅᴇᴏ ᴜᴘʟᴏᴀᴅᴇʀ ʙᴏᴛ.</b>")
+    await m.reply_text(f"<b>ʜᴇʟʟᴏ {m.from_user.mention} 👋\n\n➨ ɪ ᴀᴍ ᴛxᴛ ᴛᴏ ᴠɪᴅᴇᴏ ᴜᴘʟᴏᴀᴅᴇʀ ʙᴏᴛ.</b>")
   
 
 @bot.on_message(filters.command("stop2"))
@@ -209,7 +209,7 @@ async def upload(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    Show = f"**🔔𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗜𝗡𝗚🔔**\n\n**📝ɴᴀᴍᴇ » **`{name}\n\n❄ǫᴜᴀʟɪᴛʏ » {raw_text2}`\n\n**🔗ᴜʀʟ »** `{url}`"
+                    Show = f"**🔔𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗜𝗡𝗚🔔**\n\n**📝ɴᴀᴍᴇ » **`{name}\n\n❄ǫᴜᴀʟɪᴛʏ » {raw_text2}`\n\n**🔗ᴜʀʟ »** `{url}\n\n🤖𝗕𝗢𝗧 𝗠𝗔𝗗𝗘 𝗕𝗬 ➤ 𝗧𝗨𝗦𝗛𝗔𝗥`"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
@@ -220,7 +220,7 @@ async def upload(bot: Client, m: Message):
 
             except Exception as e:
                 await m.reply_text(
-                    f"**🥺ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ғᴀɪʟᴇᴅ🥺 **\n{str(e)}\n**ɴᴀᴍᴇ** » {name}\n**ʟɪɴᴋ** » `{url}`"
+                    f"**🥺ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ғᴀɪʟᴇᴅ🥺 **\n\n{str(e)}\n\n**ɴᴀᴍᴇ** » {name}\n\n**ʟɪɴᴋ** » `{url}`"
                 )
                 continue
 
